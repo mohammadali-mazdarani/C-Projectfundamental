@@ -20,7 +20,7 @@ int getindex();
 //-------------------
 int main(int argc, char** argv)
 {
-//this
+//this is dev1
 //Declar number of array
 int n;
 
