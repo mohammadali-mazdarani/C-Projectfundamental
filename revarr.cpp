@@ -44,3 +44,4 @@ int nuindex()
     cin>>a;
     return a;
 }
+
