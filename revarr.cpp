@@ -14,6 +14,10 @@ using namespace std;
 int nuindex();
 
 void getindex(int a[],int &b);
+
+void revarr(int a[],int temp,int b);
+
+void showarr(int a[], int b);
 //--------------------------
 //micro
 //---------------------
@@ -42,6 +46,16 @@ getindex(a , n);
 
 //Seperator
 cout<<endl<<"------------------------------"<<endl<<endl;
+
+//Declare variable for rev
+int temp;
+
+//For reverse array
+revarr(a,temp,n);
+
+//show reverse array
+showarr(a , n);
+
 getch();
 
 }
@@ -73,20 +87,69 @@ void getindex(int a[],int &b)
 
 void revarr(int a[],int temp,int b)
 {
-    for(int i=0; i<b;++i)
+if (b%2 != 0)
+{
+    int i = 0;
+
+for (int j=b-1; j>=0; --j)
+  {  
+if( i<b && i != j)
+{
+          temp = a[j];
+          a[j] = a[i];
+          a[i] = temp;
+   
+       ++i;
+}
+
+else
+{
+a[j] = a[i];
+break;
+}
+  }
+}
+
+if (b%2 == 0)
+{
+    int i = 0;
+
+for (int j=b-1; j>=0; --j)
+{
+    
+if( i<b && i != j-1 )
+{
+          temp = a[j];
+          a[j] = a[i];
+          a[i] = temp;
+          ++i;
+} 
+
+
+else
+{
+
+         temp = a[j];
+          a[j] = a[i];
+          a[i] = temp;
+           
+break;
+}
+}
+}
+}
+
+//Function for show reverse array
+
+void showarr(int a[], int b)
+
+{
+    for(int i = 0; i<b; ++i)
     {
-        
-        for(int j=b-1; j>=0; --j)
-        {
-
-            temp = a[j];
-            a[j] = a[i];
-            a[i] = temp;
-
-        }
-        
+        cout<<"["<<i<<"] = "<<a[i]<<endl;
     }
 }
+    
 
 
 
