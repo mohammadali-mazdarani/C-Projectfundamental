@@ -1,1 +1,1 @@
-#This project get a array and change to reverse number of array
+#This section get array number index

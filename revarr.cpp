@@ -17,8 +17,7 @@ using namespace std;
 //-------------------
 int main(int argc, char** argv)
 {
-//this I am Mohammad ali mazdarani
-getch();
+
 }
 //function variable
 //--------------------------
