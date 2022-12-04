@@ -10,6 +10,8 @@ using namespace std;
 *
 */
 //prototype
+
+int nuindex();
 //--------------------------
 //micro
 //---------------------
@@ -17,8 +19,24 @@ using namespace std;
 //-------------------
 int main(int argc, char** argv)
 {
+    //Declare number of index of array
+int n;
 
+//Get number of index of array
+n = nuindex();
+
+
+
+getch();
 }
 //function variable
 //--------------------------
 //functions
+
+int nuindex()
+{
+    int a;
+    cout<<"Get number of index of array = ";
+    cin>>a;
+    return a;
+}
