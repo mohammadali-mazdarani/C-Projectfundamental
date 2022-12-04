@@ -12,6 +12,8 @@ using namespace std;
 //prototype
 
 int nuindex();
+
+void getindex(int a[],int &b);
 //--------------------------
 //micro
 //---------------------
@@ -29,7 +31,17 @@ int n;
 n = nuindex();
 
 
+//Seperator
+cout<<endl<<"------------------------------"<<endl<<endl;
 
+//Declarw Array
+int a[n];
+
+//Get array value
+getindex(a , n);
+
+//Seperator
+cout<<endl<<"------------------------------"<<endl<<endl;
 getch();
 
 }
@@ -37,11 +49,23 @@ getch();
 //--------------------------
 //functions
 
+//Function get array index number
 int nuindex()
 {
     int a;
     cout<<"Get number of index of array = ";
     cin>>a;
     return a;
+}
+
+//Functon get value of index array
+void getindex(int a[],int &b)
+{
+    for(int i=0; i<b; ++i)
+    {
+        cout<<"["<<i<<"] = ";
+        cin>>a[i];
+        cout<<endl;
+    }
 }
 
