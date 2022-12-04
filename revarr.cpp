@@ -69,3 +69,24 @@ void getindex(int a[],int &b)
     }
 }
 
+//Function for reverse value of array
+
+void revarr(int a[],int temp,int b)
+{
+    for(int i=0; i<b;++i)
+    {
+        
+        for(int j=b-1; j>=0; --j)
+        {
+
+            temp = a[j];
+            a[j] = a[i];
+            a[i] = temp;
+
+        }
+        
+    }
+}
+
+
+
