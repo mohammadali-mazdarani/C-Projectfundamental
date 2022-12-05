@@ -15,9 +15,8 @@ int nuindex();
 
 void getindex(int a[],int &b);
 
-void revarr(int a[],int temp,int b);
+void revarr(int a[],int k,int b);
 
-void showarr(int a[], int b);
 //--------------------------
 //micro
 //---------------------
@@ -25,8 +24,6 @@ void showarr(int a[], int b);
 //-------------------
 int main(int argc, char** argv)
 {
-
-
 
     //Declare number of index of array
 int n;
@@ -48,13 +45,11 @@ getindex(a , n);
 cout<<endl<<"------------------------------"<<endl<<endl;
 
 //Declare variable for rev
-int temp;
+int temp = 0;
 
-//For reverse array
+//For reverse array and show array reverse
 revarr(a,temp,n);
 
-//show reverse array
-showarr(a , n);
 
 getch();
 
@@ -83,73 +78,23 @@ void getindex(int a[],int &b)
     }
 }
 
-//Function for reverse value of array
+//Function for reverse value 
 
-void revarr(int a[],int temp,int b)
+void revarr(int a[],int k,int b)
 {
-if (b%2 != 0)
-{
-    int i = 0;
 
-for (int j=b-1; j>=0; --j)
-  {  
-if( i<b && i != j)
+if (k < b)
 {
-          temp = a[j];
-          a[j] = a[i];
-          a[i] = temp;
-   
-       ++i;
+
+ revarr(a , k+1, b);
+cout<<"["<<k<<"] = "<<a[k]<<endl;
+
+}
+ 
 }
 
-else
-{
-a[j] = a[i];
-break;
-}
-  }
-}
 
-if (b%2 == 0)
-{
-    int i = 0;
 
-for (int j=b-1; j>=0; --j)
-{
     
-if( i<b && i != j-1 )
-{
-          temp = a[j];
-          a[j] = a[i];
-          a[i] = temp;
-          ++i;
-} 
-
-
-else
-{
-
-         temp = a[j];
-          a[j] = a[i];
-          a[i] = temp;
-           
-break;
-}
-}
-}
-}
-
-//Function for show reverse array
-
-void showarr(int a[], int b)
-
-{
-    for(int i = 0; i<b; ++i)
-    {
-        cout<<"["<<i<<"] = "<<a[i]<<endl;
-    }
-}
-    
-
 
 
